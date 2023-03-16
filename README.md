@@ -12,7 +12,8 @@ Application Structure
     │   ├── routes.py
     │   ├── db.py
     │   └── .env
-    └── wsgi.py ```
+    └── wsgi.py 
+```
 
 # Register Endpoint
 The request data is validated to ensure that the username, password, and email address are valid. If any of the validation checks fail, an appropriate error message is returned. If all checks pass, the user's data is inserted into a MongoDB database using the PyMongo library.
