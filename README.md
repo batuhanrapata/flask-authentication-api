@@ -31,7 +31,9 @@ Requirements
     python-dotenv==1.0.0
     Werkzeug==2.2.3
   ```
-  
+#### Command for start app 
+flask --app wsgi run 
+
 # Info
 
 ## Register Endpoint *register_endpoint.py*
