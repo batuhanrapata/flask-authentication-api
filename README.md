@@ -1,7 +1,7 @@
 # Flask-Authentication-Api
 Flask authentication api mongoDB with using JWT token and password salting
 
-Application Structure
+### Application Structure
 ```
 .
 └── flask-authentication/
@@ -31,6 +31,8 @@ Requirements
     python-dotenv==1.0.0
     Werkzeug==2.2.3
   ```
+  
+# Info
 
 ## Register Endpoint *register_endpoint.py*
 The request data is validated to ensure that the username, password, and email address are valid. If any of the validation checks fail, an appropriate error message is returned. If all checks pass, the user's data is inserted into a MongoDB database using the PyMongo library.
