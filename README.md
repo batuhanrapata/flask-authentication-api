@@ -33,7 +33,7 @@ The get_all_users function retrieves all user documents from the MongoDB collect
 ## Health Check Endpoint
 When a GET request is made to this endpoint, the function returns a JSON response containing a success status message ('status': 'success'), an OK message ('message': 'OK'), and the current timestamp ('timestamp': datetime.datetime.now(timezone.utc)). This is a simple way to check if the API is running and responding to requests.
 
-## Database Connection $$ (db.py) $$
+## Database Connection $ (db.py) $
 This code connects to a MongoDB database using the pymongo library and the credentials stored in a .env file. The get_db() function creates a MongoClient object using the MONGO_URI environment variable, and returns the database object specified by the MONGO_DBNAME and MONGO_COLLECTION environment variables.
 
 The .env file is used to store sensitive information such as passwords and API keys, and is not pushed to version control. In this code, the load_dotenv() function is used to load environment variables from the .env file into the Python environment. The os.getenv() function is used to retrieve the values of the environment variables specified in the .env file.
