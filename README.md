@@ -13,7 +13,24 @@ Application Structure
     │   ├── db.py
     │   └── .env
     └── wsgi.py 
-```
+    
+    
+    
+Requirements
+    cffi==1.15.1
+    click==8.1.3
+    cryptography==39.0.2
+    dnspython==2.3.0
+    Flask==2.2.3
+    itsdangerous==2.1.2
+    Jinja2==3.1.2
+    MarkupSafe==2.1.2
+    pycparser==2.21
+    PyJWT==2.6.0
+    pymongo==4.3.3
+    python-dotenv==1.0.0
+    Werkzeug==2.2.3
+  ```
 
 ## Register Endpoint *register_endpoint.py*
 The request data is validated to ensure that the username, password, and email address are valid. If any of the validation checks fail, an appropriate error message is returned. If all checks pass, the user's data is inserted into a MongoDB database using the PyMongo library.
