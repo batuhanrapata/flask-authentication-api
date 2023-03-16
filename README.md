@@ -1,4 +1,4 @@
-# flask-authentication-api
+# Flask-Authentication-Api
 Flask authentication api mongoDB with using JWT token and password hashing
 
 Application Structure
