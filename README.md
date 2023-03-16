@@ -37,3 +37,14 @@ When a GET request is made to this endpoint, the function returns a JSON respons
 This code connects to a MongoDB database using the pymongo library and the credentials stored in a .env file. The get_db() function creates a MongoClient object using the MONGO_URI environment variable, and returns the database object specified by the MONGO_DBNAME and MONGO_COLLECTION environment variables.
 
 The .env file is used to store sensitive information such as passwords and API keys, and is not pushed to version control. In this code, the load_dotenv() function is used to load environment variables from the .env file into the Python environment. The os.getenv() function is used to retrieve the values of the environment variables specified in the .env file.
+
+
+## App.py
+This code sets up a Flask application instance named app and loads routes defined in routes.py using the initialize_routes function. It also sets the Flask app's SECRET_KEY from an environment variable named SECRET_KEY loaded from a .env file using the load_dotenv() function from the python-dotenv library.
+
+The SECRET_KEY is used by Flask to sign and verify cookies and sessions, and to generate secure tokens, among other things. It is important to keep this value secret and not share it publicly.
+
+## Web Service Application Gateaway *wsgi.py*
+This wsgi.py file is a script that is used to launch the Flask application as a WSGI application. WSGI (Web Server Gateway Interface) is a standard interface between web servers and Python web applications or frameworks. The wsgi.py file is executed by the web server and it loads the Flask application object from src.app module and runs it using a web server.
+
+The if __name__ == "__main__": statement checks if the script is being run directly from the command line or not. If it is being run directly, then the Flask application is started using the app.run() method. In this case, the Flask application will be accessible at http://localhost:5000/ with debugging enabled (debug=True). The host parameter specifies the IP address of the machine where the application will be run, and port parameter specifies the port number on which the application will be listening for incoming requests.
